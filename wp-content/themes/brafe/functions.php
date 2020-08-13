@@ -6,6 +6,12 @@ function register_my_menu(){
 }
 add_action( 'init', 'register_my_menu' );
 
+function console_log( $data ){
+    echo '<script>';
+    echo 'console.log('. json_encode( $data ) .')';
+    echo '</script>';
+}
+
 function brafe_scripts() {
     wp_enqueue_style( "reset-sheet", get_stylesheet_directory_uri() . "/reset.css");
     wp_enqueue_style( "style-sheet", get_stylesheet_directory_uri() . "/style.css");
